@@ -1,12 +1,12 @@
 ---
 name: raglite
-version: 1.0.0
-description: "Local-first RAG cache: distill docs into structured Markdown, then index/query with Chroma + hybrid search (vector + keyword)."
+version: 1.0.2
+description: "Local-first RAG cache: distill docs into structured Markdown, then index/query with Chroma (vector) + ripgrep (keyword)."
 metadata:
   {
     "openclaw": {
       "emoji": "🔎",
-      "requires": { "bins": ["python3", "pip"] }
+      "requires": { "bins": ["python3", "pip", "rg"] }
     }
   }
 ---
@@ -34,9 +34,12 @@ This skill defaults to **OpenClaw** 🦞 for condensation unless you pass `--eng
 ./scripts/install.sh
 ```
 
+This creates a skill-local venv at `skills/raglite/.venv` and installs the PyPI package `raglite-chromadb` (CLI is still `raglite`).
+
 ## Usage
 
 ```bash
+# One-command pipeline: distill → index
 ./scripts/raglite.sh run /path/to/docs \
   --out ./raglite_out \
   --collection my-docs \
@@ -44,6 +47,12 @@ This skill defaults to **OpenClaw** 🦞 for condensation unless you pass `--eng
   --skip-existing \
   --skip-indexed \
   --nodes
+
+# Then query
+./scripts/raglite.sh query "how does X work?" \
+  --out ./raglite_out \
+  --collection my-docs \
+  --chroma-url http://127.0.0.1:8100
 ```
 
 ## Pitch

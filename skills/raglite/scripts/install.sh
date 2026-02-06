@@ -15,9 +15,9 @@ source "$VENV_DIR/bin/activate"
 python -m pip install --upgrade pip setuptools wheel >/dev/null
 
 if [[ -n "${RAGLITE_PIP_INDEX_URL:-}" ]]; then
-  python -m pip install --upgrade -i "$RAGLITE_PIP_INDEX_URL" --extra-index-url https://pypi.org/simple raglite
+  python -m pip install --upgrade -i "$RAGLITE_PIP_INDEX_URL" --extra-index-url https://pypi.org/simple raglite-chromadb
 else
-  python -m pip install --upgrade raglite
+  python -m pip install --upgrade raglite-chromadb
 fi
 
-echo "Installed raglite into $VENV_DIR"
+echo "Installed raglite (raglite-chromadb) into $VENV_DIR"

@@ -1,10 +1,10 @@
 {
   "name": "raglite",
-  "version": "1.0.0",
-  "description": "Local-first RAG cache: distill docs into structured Markdown, then index/query with Chroma + hybrid search (vector + keyword).",
+  "version": "1.0.2",
+  "description": "Local-first RAG cache: distill docs into structured Markdown, then index/query with Chroma (vector) + ripgrep (keyword).", 
   "author": "VirajSanghvi1",
   "license": "MIT",
-  "tags": ["rag", "rag-lite", "local-first", "chroma", "ripgrep", "openclaw", "ollama", "knowledge-base"],
+  "tags": ["rag", "local-first", "chroma", "chromadb", "ripgrep", "hybrid-search", "openclaw", "ollama", "knowledge-base"],
   "files": [
     "SKILL.md",
     "manifest.json",
