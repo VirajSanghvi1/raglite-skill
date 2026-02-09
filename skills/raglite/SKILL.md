@@ -1,6 +1,6 @@
 ---
 name: raglite
-version: 1.0.7
+version: 1.0.8
 description: "Local-first RAG cache: distill docs into structured Markdown, then index/query with Chroma (vector) + ripgrep (keyword)."
 metadata:
   {
