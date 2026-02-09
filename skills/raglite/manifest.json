@@ -1,6 +1,6 @@
 {
   "name": "raglite",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Local-first RAG cache: distill docs into structured Markdown, then index/query with Chroma (vector) + ripgrep (keyword).",
   "author": "VirajSanghvi1",
   "license": "MIT",
